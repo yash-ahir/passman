@@ -7,9 +7,11 @@ PassMan is a simple password manager written in Python.
   - In-built random password generator.
 
 ---
-### Installation
+### Install dependecies
 
 PassMan requires MongoDB 4.2.8 or higher to run (untested with prior versions).
+https://docs.mongodb.com/manual/administration/install-community/
+
 Install the required libraries and it should be ready to go.
 
 ```
