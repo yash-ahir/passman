@@ -19,5 +19,11 @@ pip install pyqt5 padding pycrypto
 ```
 
 ---
+### Run it
+```
+python main.py
+```
+
+---
 ### License
 **GPLv3**
