@@ -1,8 +1,6 @@
 from Crypto.Cipher import AES
 from hashlib import pbkdf2_hmac
 from Padding import appendPadding, removePadding
-from os import urandom
-
 
 def _required_padding(a, b = 16, c = 1):
     while a > b:
