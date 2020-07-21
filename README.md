@@ -27,5 +27,13 @@ python main.py
 ```
 
 ---
+### Goals
+- [x] Complete base UI functionality.
+- [x] Replace pycrypto with pycryptodome
+- [ ] Add icons with QResources
+- [ ] Replace CBC mode with CTR mode for AES.
+- [ ] Package into binary executable.
+
+---
 ### License
 **GPLv3**
