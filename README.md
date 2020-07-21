@@ -32,7 +32,6 @@ Feel free to open an issue in case of any difficulties.
 - [x] Complete base UI functionality.
 - [x] Replace pycrypto with pycryptodome.
 - [ ] Add icons with QResources.
-- [ ] Replace CBC mode with CTR mode for AES.
 - [ ] Package into binary executable.
 
 ---
