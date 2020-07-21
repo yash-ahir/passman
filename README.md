@@ -32,6 +32,8 @@ Feel free to open an issue in case of any difficulties.
 - [x] Complete base UI functionality.
 - [x] Replace pycrypto with pycryptodome.
 - [ ] Add icons with QResources.
+- [ ] Add master password migration and reset options.
+- [ ] Add clear entries option.
 - [ ] Package into binary executable.
 
 ---
