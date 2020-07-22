@@ -31,7 +31,7 @@ Feel free to open an issue in case of any difficulties.
 ### Goals
 - [x] Complete base UI functionality.
 - [x] Replace pycrypto with pycryptodome.
-- [ ] Add icons with QResources.
+- [x] Add icons for buttons and windows.
 - [ ] Add master password migration and reset options.
 - [ ] Add clear entries option.
 - [ ] Package into binary executable.
