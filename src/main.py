@@ -24,6 +24,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.newButton.pressed.connect(self.newEntry)
         self.removeButton.pressed.connect(self.deleteEntry)
         self.editButton.pressed.connect(self.editEntry)
+        self.togglePassword.setIcon(QIcon("icons/lock.svg"))
+        self.editButton.setIcon(QIcon("icons/edit.svg"))
+        self.removeButton.setIcon(QIcon("icons/minus.svg"))
+        self.newButton.setIcon(QIcon("icons/plus.svg"))
+        self.setWindowIcon(QIcon("icons/shield.svg"))
 
     def login(self):
         if not checkMasterkey():
@@ -111,6 +116,8 @@ class passwordDialog(QDialog, Ui_passwordDialog):
         self.dialogButtons.button(QDialogButtonBox.Ok).pressed.connect(self.addEntry)
         self.togglePassword.pressed.connect(lambda: toggleEcho(self.togglePassword.isChecked(), self.togglePassword, self.passwordField))
         self.generateRandom.pressed.connect(self.genPass)
+        self.togglePassword.setIcon(QIcon("icons/lock.svg"))
+        self.setWindowIcon(QIcon("icons/shield.svg"))
 
     def addEntry(self):
         title = self.titleField.text()
@@ -141,6 +148,9 @@ class setmasterDialog(QDialog, Ui_setmasterDialog):
         self.toggleConfirm.pressed.connect(lambda: toggleEcho(self.toggleConfirm.isChecked(), self.toggleConfirm, self.confirmField))
         self.dialogButtons.button(QDialogButtonBox.Ok).pressed.connect(self.setMaster)
         self.key = ""
+        self.toggleMasterkey.setIcon(QIcon("icons/lock.svg"))
+        self.toggleConfirm.setIcon(QIcon("icons/lock.svg"))
+        self.setWindowIcon(QIcon("icons/shield.svg"))
 
     def setMaster(self):
         setMasterkey(self.masterkeyField.text())
@@ -165,6 +175,8 @@ class loginDialog(QDialog, Ui_loginDialog):
         self.toggleMasterkey.pressed.connect(lambda: toggleEcho(self.toggleMasterkey.isChecked(), self.toggleMasterkey, self.masterkeyField))
         self.key = ""
         self.dialogButtons.button(QDialogButtonBox.Ok).pressed.connect(self.authenticate)
+        self.toggleMasterkey.setIcon(QIcon("icons/lock.svg"))
+        self.setWindowIcon(QIcon("icons/shield.svg"))
 
     def checkFilled(self):
         if self.masterkeyField.text() != "":
@@ -189,6 +201,8 @@ class editDialog(passwordDialog):
         self.accountField.setText(getAccount(entryId))
         self.passwordField.setText(getPassword(entryId, key))
         self.noteField.setText(getNote(entryId))
+        self.togglePassword.setIcon(QIcon("icons/lock.svg"))
+        self.setWindowIcon(QIcon("icons/shield.svg"))
     
     def addEntry(self):
         editEntry(self.entryId, self.key, self.titleField.text(), self.accountField.text(), self.passwordField.text(), self.noteField.toPlainText())
@@ -202,6 +216,7 @@ class deleteDialog(QDialog, Ui_deleteDialog):
         self.warningLabel.setText(f"Delete entry {title}? You won't be able to recover it!")
         self.dialogButtons.setStandardButtons(QDialogButtonBox.No | QDialogButtonBox.Yes)
         self.dialogButtons.button(QDialogButtonBox.Yes).pressed.connect(self.confirmDelete)
+        self.setWindowIcon(QIcon("icons/shield.svg"))
     
     def confirmDelete(self):
         self.status = True
@@ -209,10 +224,10 @@ class deleteDialog(QDialog, Ui_deleteDialog):
 def toggleEcho(status, button, field):
     if status:
         field.setEchoMode(QLineEdit.PasswordEchoOnEdit)
-        button.setIcon(QIcon.fromTheme("object-locked"))
+        button.setIcon(QIcon("icons/lock.svg"))
     else:
         field.setEchoMode(QLineEdit.Normal)
-        button.setIcon(QIcon.fromTheme("object-unlocked"))
+        button.setIcon(QIcon("icons/unlock.svg"))
 
 app = QApplication([])
 window = MainWindow()
