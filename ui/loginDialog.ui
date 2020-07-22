@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>113</height>
+    <height>120</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -51,9 +51,6 @@
      </property>
      <property name="text">
       <string/>
-     </property>
-     <property name="icon">
-      <iconset theme="object-locked"/>
      </property>
      <property name="checkable">
       <bool>true</bool>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>564</width>
-    <height>192</height>
+    <width>570</width>
+    <height>199</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -78,10 +78,6 @@
      <property name="text">
       <string/>
      </property>
-     <property name="icon">
-      <iconset theme="object-locked">
-       <normaloff>.</normaloff>.</iconset>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -113,10 +109,6 @@
      </property>
      <property name="text">
       <string/>
-     </property>
-     <property name="icon">
-      <iconset theme="object-locked">
-       <normaloff>.</normaloff>.</iconset>
      </property>
      <property name="checkable">
       <bool>true</bool>

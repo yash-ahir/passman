@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_setmasterDialog(object):
     def setupUi(self, setmasterDialog):
         setmasterDialog.setObjectName("setmasterDialog")
-        setmasterDialog.resize(564, 192)
+        setmasterDialog.resize(570, 199)
         icon = QtGui.QIcon.fromTheme("password")
         setmasterDialog.setWindowIcon(icon)
         self.gridLayout = QtWidgets.QGridLayout(setmasterDialog)
@@ -39,8 +39,6 @@ class Ui_setmasterDialog(object):
         self.toggleMasterkey = QtWidgets.QToolButton(setmasterDialog)
         self.toggleMasterkey.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.toggleMasterkey.setText("")
-        icon = QtGui.QIcon.fromTheme("object-locked")
-        self.toggleMasterkey.setIcon(icon)
         self.toggleMasterkey.setCheckable(True)
         self.toggleMasterkey.setObjectName("toggleMasterkey")
         self.gridLayout.addWidget(self.toggleMasterkey, 1, 2, 1, 1)
@@ -56,8 +54,6 @@ class Ui_setmasterDialog(object):
         self.toggleConfirm = QtWidgets.QToolButton(setmasterDialog)
         self.toggleConfirm.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.toggleConfirm.setText("")
-        icon = QtGui.QIcon.fromTheme("object-locked")
-        self.toggleConfirm.setIcon(icon)
         self.toggleConfirm.setCheckable(True)
         self.toggleConfirm.setObjectName("toggleConfirm")
         self.gridLayout.addWidget(self.toggleConfirm, 2, 2, 1, 1)

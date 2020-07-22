@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_loginDialog(object):
     def setupUi(self, loginDialog):
         loginDialog.setObjectName("loginDialog")
-        loginDialog.resize(400, 113)
+        loginDialog.resize(400, 120)
         icon = QtGui.QIcon.fromTheme("password")
         loginDialog.setWindowIcon(icon)
         self.gridLayout = QtWidgets.QGridLayout(loginDialog)
@@ -30,8 +30,6 @@ class Ui_loginDialog(object):
         self.toggleMasterkey = QtWidgets.QToolButton(loginDialog)
         self.toggleMasterkey.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.toggleMasterkey.setText("")
-        icon = QtGui.QIcon.fromTheme("object-locked")
-        self.toggleMasterkey.setIcon(icon)
         self.toggleMasterkey.setCheckable(True)
         self.toggleMasterkey.setObjectName("toggleMasterkey")
         self.gridLayout.addWidget(self.toggleMasterkey, 1, 2, 1, 1)

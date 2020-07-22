@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_passwordDialog(object):
     def setupUi(self, passwordDialog):
         passwordDialog.setObjectName("passwordDialog")
-        passwordDialog.resize(431, 305)
+        passwordDialog.resize(431, 321)
         icon = QtGui.QIcon.fromTheme("password")
         passwordDialog.setWindowIcon(icon)
         self.gridLayout = QtWidgets.QGridLayout(passwordDialog)
@@ -46,8 +46,6 @@ class Ui_passwordDialog(object):
         self.togglePassword = QtWidgets.QToolButton(self.groupBox)
         self.togglePassword.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.togglePassword.setText("")
-        icon = QtGui.QIcon.fromTheme("object-locked")
-        self.togglePassword.setIcon(icon)
         self.togglePassword.setCheckable(True)
         self.togglePassword.setObjectName("togglePassword")
         self.gridLayout_2.addWidget(self.togglePassword, 0, 2, 1, 1)

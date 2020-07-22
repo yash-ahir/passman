@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>PassMan - Entries</string>
   </property>
-  <property name="windowIcon">
-   <iconset theme="password">
-    <normaloff>.</normaloff>.</iconset>
-  </property>
   <property name="iconSize">
    <size>
     <width>32</width>
@@ -69,10 +65,6 @@
          <property name="text">
           <string>Remove</string>
          </property>
-         <property name="icon">
-          <iconset theme="albumfolder-user-trash">
-           <normaloff>.</normaloff>.</iconset>
-         </property>
         </widget>
        </item>
        <item row="3" column="1" colspan="3">
@@ -89,10 +81,6 @@
          </property>
          <property name="text">
           <string>Edit</string>
-         </property>
-         <property name="icon">
-          <iconset theme="edit">
-           <normaloff>.</normaloff>.</iconset>
          </property>
         </widget>
        </item>
@@ -113,10 +101,6 @@
          </property>
          <property name="text">
           <string/>
-         </property>
-         <property name="icon">
-          <iconset theme="object-locked">
-           <normaloff>.</normaloff>.</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -161,10 +145,6 @@
       <property name="text">
        <string>New Entry</string>
       </property>
-      <property name="icon">
-       <iconset theme="add">
-        <normaloff>.</normaloff>.</iconset>
-      </property>
      </widget>
     </item>
     <item row="0" column="0" rowspan="2">
@@ -188,7 +168,7 @@
      <x>0</x>
      <y>0</y>
      <width>666</width>
-     <height>29</height>
+     <height>30</height>
     </rect>
    </property>
   </widget>
