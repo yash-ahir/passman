@@ -35,6 +35,7 @@ Feel free to open an issue in case of any difficulties.
 - [ ] Add master password migration and reset options.
 - [ ] Add clear entries option.
 - [ ] Package into binary executable.
+- [ ] Add regex matching to random password generator for matching strong password guidelines as provided [here](https://csguide.cs.princeton.edu/accounts/passwords).
 
 ---
 ### License
