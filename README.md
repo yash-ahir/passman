@@ -31,10 +31,11 @@ Feel free to open an issue in case of any difficulties.
 ### Goals
 - [x] Complete base UI functionality.
 - [x] Replace pycrypto with pycryptodome.
-- [ ] Add icons with QResources.
+- [x] Add icons for buttons and windows.
 - [ ] Add master password migration and reset options.
 - [ ] Add clear entries option.
 - [ ] Package into binary executable.
+- [ ] Add regex matching to random password generator for matching strong password guidelines as provided [here](https://csguide.cs.princeton.edu/accounts/passwords).
 
 ---
 ### License
