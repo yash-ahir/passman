@@ -33,7 +33,7 @@ Feel free to open an issue in case of any difficulties.
 - [x] Replace pycrypto with pycryptodome.
 - [x] Add icons for buttons and windows.
 - [x] Change AES key to 256-bit.
-- [x] Add copy to clipboard button
+- [x] Add copy to clipboard button.
 - [ ] Add master password migration and reset options.
 - [ ] Add clear entries option.
 - [ ] Package into binary executable.
