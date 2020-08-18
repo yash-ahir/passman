@@ -17,7 +17,7 @@ https://docs.mongodb.com/manual/administration/install-community/
 Install the required libraries, change directory to src/ and run it.
 
 ```
-pip install pyqt5 padding pycryptodome pymongo
+pip install pyqt5 padding pycryptodome pymongo pyperclip
 ```
 
 ---
