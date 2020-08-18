@@ -32,11 +32,12 @@ Feel free to open an issue in case of any difficulties.
 - [x] Complete base UI functionality.
 - [x] Replace pycrypto with pycryptodome.
 - [x] Add icons for buttons and windows.
+- [x] Change AES key to 256-bit.
+- [x] Add copy to clipboard button.
 - [ ] Add master password migration and reset options.
 - [ ] Add clear entries option.
 - [ ] Package into binary executable.
 - [ ] Add regex matching to random password generator for matching strong password guidelines as provided [here](https://csguide.cs.princeton.edu/accounts/passwords).
-- [ ] Change AES key to 256-bit.
 
 ---
 ### License
