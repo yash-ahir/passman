@@ -10,6 +10,7 @@ from deleteDialog import Ui_deleteDialog
 from dbQueries import *
 from randomPass import generatePass
 from bson import ObjectId
+import pyperclip
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -24,10 +25,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.newButton.pressed.connect(self.newEntry)
         self.removeButton.pressed.connect(self.deleteEntry)
         self.editButton.pressed.connect(self.editEntry)
+        self.copyPassword.pressed.connect(lambda: copyPass(self.passwordField))
         self.togglePassword.setIcon(QIcon("icons/lock.svg"))
         self.editButton.setIcon(QIcon("icons/edit.svg"))
         self.removeButton.setIcon(QIcon("icons/minus.svg"))
         self.newButton.setIcon(QIcon("icons/plus.svg"))
+        self.copyPassword.setIcon(QIcon("icons/clipboard.svg"))
         self.setWindowIcon(QIcon("icons/shield.svg"))
 
     def login(self):
@@ -116,7 +119,9 @@ class passwordDialog(QDialog, Ui_passwordDialog):
         self.dialogButtons.button(QDialogButtonBox.Ok).pressed.connect(self.addEntry)
         self.togglePassword.pressed.connect(lambda: toggleEcho(self.togglePassword.isChecked(), self.togglePassword, self.passwordField))
         self.generateRandom.pressed.connect(self.genPass)
+        self.copyPassword.pressed.connect(lambda: copyPass(self.passwordField))
         self.togglePassword.setIcon(QIcon("icons/lock.svg"))
+        self.copyPassword.setIcon(QIcon("icons/clipboard.svg"))
         self.setWindowIcon(QIcon("icons/shield.svg"))
 
     def addEntry(self):
@@ -201,8 +206,6 @@ class editDialog(passwordDialog):
         self.accountField.setText(getAccount(entryId))
         self.passwordField.setText(getPassword(entryId, key))
         self.noteField.setText(getNote(entryId))
-        self.togglePassword.setIcon(QIcon("icons/lock.svg"))
-        self.setWindowIcon(QIcon("icons/shield.svg"))
     
     def addEntry(self):
         editEntry(self.entryId, self.key, self.titleField.text(), self.accountField.text(), self.passwordField.text(), self.noteField.toPlainText())
@@ -228,6 +231,9 @@ def toggleEcho(status, button, field):
     else:
         field.setEchoMode(QLineEdit.Normal)
         button.setIcon(QIcon("icons/unlock.svg"))
+
+def copyPass(field):
+    pyperclip.copy(field.text())
 
 app = QApplication([])
 window = MainWindow()
