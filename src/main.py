@@ -148,7 +148,7 @@ class setmasterDialog(QDialog, Ui_setmasterDialog):
         self.dialogButtons.button(QDialogButtonBox.Ok).setDisabled(True)
         self.masterkeyField.textChanged.connect(self.checkFilled)
         self.confirmField.textChanged.connect(self.checkFilled)
-        self.dialogButtons.button(QDialogButtonBox.Cancel).pressed.connect(self.exit)
+        self.dialogButtons.button(QDialogButtonBox.Cancel).pressed.connect(lambda: sys.exit())
         self.toggleMasterkey.pressed.connect(lambda: toggleEcho(self.toggleMasterkey.isChecked(), self.toggleMasterkey, self.masterkeyField))
         self.toggleConfirm.pressed.connect(lambda: toggleEcho(self.toggleConfirm.isChecked(), self.toggleConfirm, self.confirmField))
         self.dialogButtons.button(QDialogButtonBox.Ok).pressed.connect(self.setMaster)
@@ -167,9 +167,6 @@ class setmasterDialog(QDialog, Ui_setmasterDialog):
         else:
             self.dialogButtons.button(QDialogButtonBox.Ok).setDisabled(True)
 
-    def exit(self):
-        sys.exit()
-
 class loginDialog(QDialog, Ui_loginDialog):
     def __init__(self):
         super(loginDialog, self).__init__()
@@ -177,8 +174,10 @@ class loginDialog(QDialog, Ui_loginDialog):
         self.dialogButtons.button(QDialogButtonBox.Ok).setDisabled(True)
         self.masterkeyField.textChanged.connect(self.checkFilled)
         self.status = False
+        self.passwordMessage.hide()
         self.toggleMasterkey.pressed.connect(lambda: toggleEcho(self.toggleMasterkey.isChecked(), self.toggleMasterkey, self.masterkeyField))
         self.key = ""
+        self.dialogButtons.accepted.disconnect()
         self.dialogButtons.button(QDialogButtonBox.Ok).pressed.connect(self.authenticate)
         self.toggleMasterkey.setIcon(QIcon("icons/lock.svg"))
         self.setWindowIcon(QIcon("icons/shield.svg"))
@@ -195,6 +194,9 @@ class loginDialog(QDialog, Ui_loginDialog):
         if hashedKey == masterKey:
             self.status = True
             self.key = self.masterkeyField.text()
+            self.accept()
+        else:
+            self.passwordMessage.show()
 
 class editDialog(passwordDialog):
     def __init__(self, key, entryId):

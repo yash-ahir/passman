@@ -7,36 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>120</height>
+    <height>139</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>PassMan - Login</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="1">
-    <widget class="QLineEdit" name="masterkeyField">
-     <property name="toolTip">
-      <string>Enter your master key/password</string>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::Password</enum>
-     </property>
-     <property name="placeholderText">
-      <string>Enter your master key/password</string>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Master key:</string>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="2">
     <widget class="QToolButton" name="toggleMasterkey">
      <property name="cursor">
@@ -49,6 +26,48 @@
       <string/>
      </property>
      <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QDialogButtonBox" name="dialogButtons">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Master key:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="masterkeyField">
+     <property name="toolTip">
+      <string>Enter your master key/password</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Enter your master key/password</string>
+     </property>
+     <property name="clearButtonEnabled">
       <bool>true</bool>
      </property>
     </widget>
@@ -69,15 +88,12 @@
     </widget>
    </item>
    <item row="2" column="0" colspan="3">
-    <widget class="QDialogButtonBox" name="dialogButtons">
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
+    <widget class="QLabel" name="passwordMessage">
+     <property name="enabled">
+      <bool>true</bool>
      </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     <property name="text">
+      <string>Wrong password, please try again.</string>
      </property>
     </widget>
    </item>
