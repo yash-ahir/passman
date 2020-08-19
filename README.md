@@ -9,7 +9,7 @@ PassMan is a simple, cross platform password manager written in Python.
 ---
 ### Install dependecies
 
-Requires Python 3, only tested with 3.8.3 as of now.
+Requires Python 3, only tested with 3.8.3 as of now, should work with newer versions.
 
 MongoDB 4.2.8 or higher to run (untested with prior versions).
 https://docs.mongodb.com/manual/administration/install-community/
