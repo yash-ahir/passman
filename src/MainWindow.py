@@ -109,9 +109,11 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(self.titleField, self.accountField)
         MainWindow.setTabOrder(self.accountField, self.passwordField)
         MainWindow.setTabOrder(self.passwordField, self.togglePassword)
-        MainWindow.setTabOrder(self.togglePassword, self.noteField)
+        MainWindow.setTabOrder(self.togglePassword, self.copyPassword)
+        MainWindow.setTabOrder(self.copyPassword, self.noteField)
         MainWindow.setTabOrder(self.noteField, self.editButton)
-        MainWindow.setTabOrder(self.editButton, self.newButton)
+        MainWindow.setTabOrder(self.editButton, self.removeButton)
+        MainWindow.setTabOrder(self.removeButton, self.newButton)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

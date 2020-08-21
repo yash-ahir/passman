@@ -97,7 +97,8 @@ class Ui_passwordDialog(object):
         passwordDialog.setTabOrder(self.titleField, self.accountField)
         passwordDialog.setTabOrder(self.accountField, self.passwordField)
         passwordDialog.setTabOrder(self.passwordField, self.togglePassword)
-        passwordDialog.setTabOrder(self.togglePassword, self.generateRandom)
+        passwordDialog.setTabOrder(self.togglePassword, self.copyPassword)
+        passwordDialog.setTabOrder(self.copyPassword, self.generateRandom)
         passwordDialog.setTabOrder(self.generateRandom, self.passwordLength)
         passwordDialog.setTabOrder(self.passwordLength, self.noteField)
 

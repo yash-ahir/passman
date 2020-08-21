@@ -99,6 +99,10 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>masterkeyField</tabstop>
+  <tabstop>toggleMasterkey</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

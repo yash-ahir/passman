@@ -58,6 +58,7 @@ class Ui_loginDialog(object):
         self.dialogButtons.accepted.connect(loginDialog.accept)
         self.dialogButtons.rejected.connect(loginDialog.reject)
         QtCore.QMetaObject.connectSlotsByName(loginDialog)
+        loginDialog.setTabOrder(self.masterkeyField, self.toggleMasterkey)
 
     def retranslateUi(self, loginDialog):
         _translate = QtCore.QCoreApplication.translate

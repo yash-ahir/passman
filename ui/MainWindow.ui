@@ -196,8 +196,10 @@
   <tabstop>accountField</tabstop>
   <tabstop>passwordField</tabstop>
   <tabstop>togglePassword</tabstop>
+  <tabstop>copyPassword</tabstop>
   <tabstop>noteField</tabstop>
   <tabstop>editButton</tabstop>
+  <tabstop>removeButton</tabstop>
   <tabstop>newButton</tabstop>
  </tabstops>
  <resources/>
