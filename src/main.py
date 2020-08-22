@@ -175,6 +175,7 @@ class loginDialog(QDialog, Ui_loginDialog):
         self.masterkeyField.textChanged.connect(self.checkFilled)
         self.status = False
         self.passwordMessage.hide()
+        self.masterkeyField.setFocus(True)
         self.toggleMasterkey.pressed.connect(lambda: toggleEcho(self.toggleMasterkey.isChecked(), self.toggleMasterkey, self.masterkeyField))
         self.key = ""
         self.dialogButtons.accepted.disconnect()
