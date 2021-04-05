@@ -1,4 +1,4 @@
-# NO LONGER IN DEVELOPMENT, CHECK OUT IT'S SUCCESSOR CREATED IN FLUTTER (HERE) [https://github.com/yash-ahir/passman-flutter]
+# NO LONGER IN DEVELOPMENT, CHECK OUT IT'S SUCCESSOR CREATED IN FLUTTER HERE https://github.com/yash-ahir/passman-flutter
 ---
 # PassMan
 ---
