@@ -1,3 +1,5 @@
+# NO LONGER IN DEVELOPMENT, CHECK OUT IT'S SUCCESSOR CREATED IN FLUTTER (HERE) [https://github.com/yash-ahir/passman-flutter]
+---
 # PassMan
 ---
 PassMan is a simple, cross platform password manager written in Python.
